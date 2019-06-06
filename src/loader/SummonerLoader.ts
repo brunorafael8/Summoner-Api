@@ -1,7 +1,21 @@
-import DataLoader from 'dataloader'
-import { Region, fetchSummonerByName } from './helpers'
+import { Region, fetchSummonerByName } from '../helpers'
 
-// TODO: Put types on returns
-const load = (region: Region, name: string): Promise<any> => fetchSummonerByName(region, name)
+export interface LoadArgs {
+  region: Region;
+  name: string;
+}
 
-export default (region: Region): any => new DataLoader((name: string): any => load(region, name))
+export interface LoadResponse {
+  region: Region;
+  name: string;
+}
+
+export const load = async ({
+  region,
+  name
+}: LoadArgs): Promise<LoadResponse> => {
+  const summoner = await fetchSummonerByName(region, name)
+  console.log('summoner', summoner)
+
+  return summoner
+}
