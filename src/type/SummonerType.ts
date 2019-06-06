@@ -21,8 +21,9 @@ export default new GraphQLObjectType({
       description: 'Summoner Level'
     },
     profileIconId: {
-      type: GraphQLInt,
-      description: 'Summoner Icon'
+      type: GraphQLString,
+      description: 'Summoner Icon',
+      resolve: ({ profileIconId }: { profileIconId: number }): string => `https://ddragon.leagueoflegends.com/cdn/9.9.1/img/profileicon/${profileIconId}.png`
     }
   })
 })
