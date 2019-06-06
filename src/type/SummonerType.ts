@@ -1,15 +1,15 @@
-import { GraphQLInt, GraphQLObjectType, GraphQLString } from 'graphql'
+import { GraphQLObjectType, GraphQLString } from 'graphql'
 
 export default new GraphQLObjectType({
   name: 'Summoner',
   description: 'Summoner data',
   fields: () => ({
     id: {
-      type: GraphQLInt,
+      type: GraphQLString,
       description: 'Summoner ID'
     },
     accountId: {
-      type: GraphQLInt,
+      type: GraphQLString,
       description: 'Summoner Account ID'
     },
     name: {
