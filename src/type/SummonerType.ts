@@ -1,4 +1,4 @@
-import { GraphQLObjectType, GraphQLString } from 'graphql'
+import { GraphQLInt, GraphQLObjectType, GraphQLString } from 'graphql'
 
 export default new GraphQLObjectType({
   name: 'Summoner',
@@ -15,6 +15,14 @@ export default new GraphQLObjectType({
     name: {
       type: GraphQLString,
       description: 'Summoner Name'
+    },
+    summonerLevel: {
+      type: GraphQLInt,
+      description: 'Summoner Level'
+    },
+    profileIconId: {
+      type: GraphQLInt,
+      description: 'Summoner Icon'
     }
   })
 })
