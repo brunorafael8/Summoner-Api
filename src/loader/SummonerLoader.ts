@@ -15,7 +15,5 @@ export const load = async ({
   name
 }: LoadArgs): Promise<LoadResponse> => {
   const summoner = await fetchSummonerByName(region, name)
-  console.log('summoner', summoner)
-
   return summoner
 }
