@@ -1,1 +1,2 @@
-export * as SummonerLoader from './SummonerLoader'
+import * as SummonerLoader from './SummonerLoader'
+export { SummonerLoader }

@@ -1,5 +1,5 @@
-import fetch from 'isomorphic-fetch'
 import dotenv from 'dotenv'
+import fetch from 'isomorphic-fetch'
 
 dotenv.config()
 
